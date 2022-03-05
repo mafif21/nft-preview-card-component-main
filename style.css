@@ -15,6 +15,7 @@ body {
   background-color: hsl(216, 50%, 16%);
   margin: 50px auto;
   border-radius: 12px;
+  box-sizing: border-box;
 }
 
 .container {
@@ -31,36 +32,72 @@ body {
   height: 300px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  /* background-color: cyan; */
 }
+
+.layer {
+  background-color: cyan;
+  width: 290px;
+  height: 290px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 12px;
+  margin: 50% auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.layer img {
+  width: 70px;
+  height: 70px;
+}
+
+/* .detail {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 999;
+  opacity: 0;
+} */
 
 .nft-img img {
   max-width: 100%;
   max-height: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
+  padding: 5px;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .description {
-  margin: 0 4px 0 4px;
+  padding: 8px;
 }
 
 .description h3 {
   font-weight: 600;
   color: white;
-  margin: 15px 0;
+  margin: 6px 0;
 }
 
 .description p {
   font-weight: 300;
   font-size: 18px;
   color: hsl(215, 51%, 70%);
-  margin: 18px 0;
+  margin: 15px 0;
 }
 
 .info {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 14px 0;
+  /* margin: 14px 0; */
+  padding: 8px;
 }
 
 .info .price {
@@ -98,23 +135,23 @@ body {
   width: 95%;
   /* border: 0.1px solid hsl(215, 51%, 70%); */
   border-top: 0.1px;
-  margin: 10px 6px 6px 0;
+  margin: 15px 5px 10px 5px;
   opacity: 0.5;
 }
 
 .user {
   display: flex;
-  margin-top: 10px;
-  margin-bottom: 8px;
+  padding: 2px 4px;
   align-items: center;
   color: hsl(215, 51%, 70%);
+  margin-bottom: 5px;
 }
 
 .user img {
   max-width: 8%;
   border: 1px solid white;
   border-radius: 100%;
-  margin-right: 12px;
+  margin-right: 14px;
 }
 
 .user p {
@@ -139,4 +176,14 @@ body {
 .description h3:hover {
   cursor: pointer;
   color: hsl(178, 100%, 50%);
+}
+
+.user p span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.layer:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
